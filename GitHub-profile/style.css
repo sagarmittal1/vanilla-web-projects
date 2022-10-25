@@ -97,6 +97,9 @@ h4 {
 }
 
 @media (max-width: 50rem) {
+  body {
+    overflow: scroll !important;
+  }
   .card {
     flex-direction: column;
     align-items: center;

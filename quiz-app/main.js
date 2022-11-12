@@ -1,38 +1,39 @@
 const quizData = [
   {
-    question: 'Who is prime minister of India ?',
-    a: 'Sagar Mittal',
-    b: 'Narendra Modi',
-    c: 'Amit Shah',
-    d: 'Rahul Gandhi',
-    correct: 'a',
+    question: 'Windows is a ...?',
+    a: 'Browser',
+    b: 'Operating System',
+    c: 'Software',
+    d: 'Antivirus',
+    correct: 'b',
   },
   {
-    question: 'Who is president of India',
-    a: 'Sagar Mittal',
-    b: 'Narendra Modi',
-    c: 'Amit Shah',
-    d: 'Rahul Gandhi',
-    correct: 'a',
+    question: 'What does CSS stand for?',
+    a: 'Central Style Sheets',
+    b: 'Cascading Style Sheets',
+    c: 'Cascading Simple Sheets',
+    d: 'Cars SUVs Sailboats',
+    correct: 'b',
   },
   {
-    question: 'Who is chief of India',
+    question: 'Who is the CEO of Google (in 2022)?',
     a: 'Sagar Mittal',
-    b: 'Narendra Modi',
-    c: 'Amit Shah',
-    d: 'Rahul Gandhi',
-    correct: 'a',
+    b: 'Sergey Brin',
+    c: 'Sundar Pichai',
+    d: 'Steve Wozniak',
+    correct: 'c',
   },
   {
-    question: 'Who is army of India',
-    a: 'Sagar Mittal',
-    b: 'Narendra Modi',
-    c: 'Amit Shah',
-    d: 'Rahul Gandhi',
+    question: 'What is the parent company of Google',
+    a: 'Alphabet',
+    b: 'Apple',
+    c: 'BackRub',
+    d: 'Goooogle',
     correct: 'a',
   },
 ];
 
+const quiz = document.querySelector('.quiz-container');
 const question = document.getElementById('question');
 const a_text = document.getElementById('a-text');
 const b_text = document.getElementById('b-text');
@@ -40,9 +41,12 @@ const c_text = document.getElementById('c-text');
 const d_text = document.getElementById('d-text');
 const submitBtn = document.querySelector('.btn');
 
-let currentNo = 0;
+let currentNo = 0,
+  score = 0;
 
 const loadQuiz = () => {
+  resetBoxes();
+
   const currentQuestion = quizData[currentNo];
   question.innerHTML = currentQuestion.question;
   a_text.innerHTML = currentQuestion.a;
@@ -53,7 +57,44 @@ const loadQuiz = () => {
 
 loadQuiz();
 
+const loadAnswers = () => {
+  const answers = document.querySelectorAll('[name="answer"]');
+  let userAnswer;
+
+  answers.forEach((answer) => {
+    if (answer.checked) {
+      userAnswer = answer.id;
+    }
+  });
+
+  return userAnswer;
+};
+
+function resetBoxes() {
+  const answers = document.querySelectorAll('[name="answer"]');
+  answers.forEach((answer) => {
+    answer.checked = false;
+  });
+}
+
 submitBtn.addEventListener('click', () => {
-  currentNo++;
-  loadQuiz();
+  const userAnswer = loadAnswers();
+  // console.log(userAnswer);
+
+  if (userAnswer) {
+    if (userAnswer === quizData[currentNo].correct) score++;
+    // console.log(score);
+
+    currentNo++;
+
+    if (currentNo < quizData.length) {
+      loadQuiz();
+    } else {
+      quiz.classList.add('result');
+      quiz.innerHTML = `
+        <h2>You answerd correcty ${score} out of ${quizData.length} questions</h2>
+        <button onClick="location.reload()" class="btn">Reload</button>
+      `;
+    }
+  }
 });

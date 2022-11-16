@@ -27,8 +27,9 @@ function createMeal(meal) {
 <div class="main">
   <h2 id="meal-name">${meal.strMeal}</h2>
   <p id="instructions">${meal.strInstructions}</p>
+  <h2>Video Recipe</h2>
   <div id="meal-video">
-  <iframe src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}"></iframe>
+    <iframe src="https://www.youtube.com/embed/${meal.strYoutube.slice(-11)}"></iframe>
   </div>
 </div>
   `;

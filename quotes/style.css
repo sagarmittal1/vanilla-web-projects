@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  padding: 3rem;
+  max-width: 70rem;
+}
+
+.card h2 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.card cite {
+  font-size: 2rem;
+}

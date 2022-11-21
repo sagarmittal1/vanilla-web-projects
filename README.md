@@ -9,3 +9,4 @@ Some projects that I made that used only HTML, CSS, JavaScript
 | 3 | [Quiz App](./quiz-app/) | [Live](https://sagarmittal1.github.io/vanilla-web-projects/quiz-app/) |
 | 4 | [Random Meal Generator](./random-meal-generator/) | [Live](https://sagarmittal1.github.io/vanilla-web-projects/random-meal-generator) |
 | 5 | [Random Color Generator](./random-color-generator/) | [Live](https://sagarmittal1.github.io/vanilla-web-projects/random-color-generator) |
+| 6 | [Quotes Generator](./quotes/) | [Live](https://sagarmittal1.github.io/vanilla-web-projects/quotes) |

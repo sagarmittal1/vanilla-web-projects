@@ -1,8 +1,6 @@
 const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
 
-generateQuote();
-
 function generateQuote() {
   fetch('https://api.quotable.io/random')
     .then((res) => res.json())

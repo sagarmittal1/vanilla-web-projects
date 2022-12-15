@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,400i,700");
+
+body {
+	font-size: 16px;
+	background-color: azure;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	margin: 0;
+}
+
+h1 {
+	margin: 0;
+	font-family: Merriweather, serif;
+}
+
+pre {
+	tab-size: 4;
+}
+
+code {
+	border-radius: 10px;
+}

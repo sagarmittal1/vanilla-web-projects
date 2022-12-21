@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.loader::after {
+  content: '';
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  animation: loader 0.5s infinite;
+  animation-direction: alternate;
+}
+
+.loader-active {
+  display: flex;
+}
+
+@keyframes loader {
+  from {
+    transform: translateY(-50px) scale(0.5);
+    border-radius: 100%;
+  }
+  to {
+    transform: translateY(50px) scale(1);
+    border-radius: 0%;
+  }
+}

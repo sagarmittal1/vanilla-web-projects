@@ -12,3 +12,4 @@ Some projects that I made that used only HTML, CSS, JavaScript
 | 6 | [Quotes Generator](./quotes/) | [Live](https://sagarmittal1.github.io/vanilla-web-projects/quotes) |
 | 7 | [Image Editor](./image-editor/) | [Live](https://sagarmittal1.github.io/vanilla-web-projects/image-editor) |
 | 8 | [highlight.js Example](./highlight.js-example/) | [Live](https://sagarmittal1.github.io/vanilla-web-projects/highlight.js-example) |
+| 9 | [CSS Loader](./css-loader/) | [Live](https://sagarmittal1.github.io/vanilla-web-projects/css-loader) |

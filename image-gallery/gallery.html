@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <!--Font Awesome Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="loadImages()">
+    <div class="container">
+      <div class="navigation-btn">
+        <button class="btn" onclick="backToHome()">👈 Back to Upload</button>
+        <button class="btn" onclick="toFavouritePage()">
+          Favourites Page 👉
+        </button>
+      </div>
+      <p id="num-of-files">Number of Images :</p>
+      <div id="images"></div>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+  </body>
+</html>
